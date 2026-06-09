@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
+  provider  = "mysql"
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
@@ -59,3 +59,7 @@ model Event {
   category     CategoryEvent @relation(fields: [categoryId], references: [id])
   pembicara    Pembicara     @relation(fields: [pembicaraId], references: [id])
 }
+
+
+
+
